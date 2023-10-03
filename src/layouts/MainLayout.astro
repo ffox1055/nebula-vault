@@ -1,0 +1,23 @@
+---
+import BaseHead from "./BaseHead.astro";
+import Footer from "./Footer.astro";
+import Nav from "./Nav.astro";
+
+const { title = "Dummy", description = "Description about your website" } =
+  Astro.props;
+---
+
+<html lang="en">
+  <BaseHead {title} {description}/>
+  <body>
+		<!-- nav -->
+		<Nav />
+
+		<!-- content -->
+    <slot />
+
+		<!-- footer -->
+		<Footer />
+
+  </body>
+</html>

@@ -1,0 +1,7 @@
+.swiper-pagination {
+  @apply text-left;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-secondary;
+}

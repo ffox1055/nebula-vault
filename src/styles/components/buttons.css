@@ -1,0 +1,27 @@
+.btn {
+  @apply uppercase tracking-[1.02px] flex items-center justify-center ;
+}
+
+/* btn dark */
+.btn-primary {
+  @apply bg-primary text-white leading-[60px] min-w-[164px] px-8 transition-all duration-500 border-b-primary border-b-4;
+}
+.btn-primary:hover {
+  @apply  border-b-4 border-secondary;
+}
+
+
+/* btn border bottom */
+.btn-border {
+  @apply border-b-2 border-b-secondary relative transition-all duration-300 overflow-hidden leading-[32px] py-3 lg:py-3 min-w-[164px];
+}
+.btn-border:hover {
+  @apply text-white;
+}
+.btn-border::before {
+  content: "";
+  @apply absolute top-0 left-0 w-full h-full bg-primary transition-all duration-500 -z-[1] translate-y-[100%];
+}
+.btn-border:hover::before {
+  transform: translateY(0);
+}

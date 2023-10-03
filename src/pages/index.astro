@@ -1,0 +1,341 @@
+---
+import { Image } from "astro:assets";
+import img1 from "/public/img-1.jpg";
+
+// card img swiper
+import imgCard1 from "/public/card-img-1.jpg";
+import imgCard3 from "/public/card-img-3.jpg";
+import imgCard4 from "/public/card-img-4.jpg";
+import imgCard5 from "/public/card-img-5.jpg";
+
+import otherImg from "/public/other-img.jpg";
+
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout>
+  <!-- hero -->
+  <section class="hero h-[600px]">
+    <div class="container mx-auto h-full mt-[96px] lg:mt-[78px]">
+      <div
+        class="flex w-full lg:w-1/2 flex-col justify-center lg:items-center h-full gap-y-6"
+      >
+        <h1
+          class="h1 drop-shadow-2xl text-white tracking-normal lg:tracking-[2px] uppercase"
+        >
+          perfect spot for some <span class="text-primary">cozy</span> indoor
+        </h1>
+        <p class="sub-text-hero text-lg tracking-[1.8px] text-white pb-6">
+          The best place to relax, just listen to music, and find calmness is by
+          the tranquil shores of a cozy room, where the rhythmic waves harmonize
+          with the melody in your ears.
+        </p>
+        <button class="btn btn-primary self-start">See more</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- section slogan -->
+  <section class="slogan mt-20">
+    <div class="container mx-auto">
+      <div
+        class="flex flex-col gap-y-6 lg:flex-row-reverse md:w-full lg:gap-x-10"
+      >
+        <div class="flex-1 flex flex-col">
+          <h2
+            class="h2 tracking-tight lg:border-l-2 lg:border-l-primary lg:pl-2"
+          >
+            Chill vibes, where relaxation meets elevation
+          </h2>
+          <div
+            class="flex flex-col h-full gap-y-6 lg:gap-y-0 lg:pl-2 lg:justify-around"
+          >
+            <p class="leading-9 lg:leading-normal">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+              excepturi omnis sint beatae libero repellendus dolorem tenetur
+              impedit, vel asperiores?
+            </p>
+            <a href="#" class="btn btn-border self-start lg:text-lg"
+              >Learn more</a
+            >
+          </div>
+        </div>
+
+        <div class="lg:max-w-[540px] xl:max-w-[640px] overflow-hidden">
+          <Image src={img1} alt="living room" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- room section -->
+  <section class="room mt-20">
+    <div class="flex flex-col gap-y-6">
+      <div class="container mx-auto">
+        <!-- title -->
+        <div class="flex flex-col gap-y-5">
+          <h2 class="h2 title-underline">Our Project</h2>
+          <p>
+            The products that we always take pride in, you can choose them as
+            you like, and let the pride blossom even more beautifully
+          </p>
+        </div>
+      </div>
+      <!-- <div class="item-container 3xl:max-w-[2000px] 3xl:mx-auto ml-4 mr-4 lg:mr-0 lg:ml-[4rem] xl:ml-[5rem]"> -->
+      <div class="container mx-auto">
+        <!-- item -->
+        <!-- Slider main container -->
+        <div class="swiper lg:pb-16">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper flex-col gap-y-6 lg:flex-row lg:gap-y-0">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="card-img">
+                <Image src={imgCard1} alt="living room 1" />
+                <div class="card-img-description">
+                  <p class="text-lg uppercase">Room number one</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-img">
+                <Image src={imgCard3} alt="living room 2" />
+                <div class="card-img-description">
+                  <p class="text-lg uppercase">Room number two</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-img">
+                <Image src={imgCard4} alt="living room 3" />
+                <div class="card-img-description">
+                  <p class="text-lg uppercase">Room number three</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-img">
+                <Image src={imgCard5} alt="living room 4" />
+                <div class="card-img-description">
+                  <p class="text-lg uppercase">Room number four</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- section service -->
+  <section class="services mt-20 bg-[#fdfdfd]">
+    <div class="container mx-auto py-20">
+      <div class="flex flex-col gap-y-10">
+        <div class="text-center">
+          <h2 class="h2 title-underline">Services</h2>
+        </div>
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+          <div class="service-card">
+            <i class="ri-home-smile-2-line"></i>
+            <div class="flex flex-col gap-y-6">
+              <h5 class="h5">Cozy Consultation</h5>
+              <p class="text-base leading-7">
+                Dive into the world of coziness with our personalized Cozy
+                Consultation service. Our expert advisors will take the time to
+                understand your preferences, lifestyle, and desired ambiance.
+              </p>
+            </div>
+          </div>
+          <div class="service-card">
+            <i class="ri-plant-line"></i>
+            <div class="flex flex-col gap-y-6">
+              <h5 class="h5">Snug Space Styling</h5>
+              <p class="text-base leading-7">
+                Dive into the world of coziness with our personalized Cozy
+                Consultation service. Our expert advisors will take the time to
+                understand your preferences, lifestyle, and desired ambiance.
+              </p>
+            </div>
+          </div>
+          <div class="service-card">
+            <i class="ri-door-open-line"></i>
+            <div class="flex flex-col gap-y-6">
+              <h5 class="h5">Hygge Home Finder</h5>
+              <p class="text-base leading-7">
+                Dive into the world of coziness with our personalized Cozy
+                Consultation service. Our expert advisors will take the time to
+                understand your preferences, lifestyle, and desired ambiance.
+              </p>
+            </div>
+          </div>
+          <div class="service-card">
+            <i class="ri-sun-foggy-line"></i>
+            <div class="flex flex-col gap-y-6">
+              <h5 class="h5">Warm Welcome Package</h5>
+              <p class="text-base leading-7">
+                Dive into the world of coziness with our personalized Cozy
+                Consultation service. Our expert advisors will take the time to
+                understand your preferences, lifestyle, and desired ambiance.
+              </p>
+            </div>
+          </div>
+          <div class="service-card">
+            <i class="ri-sun-line"></i>
+            <div class="flex flex-col gap-y-6">
+              <h5 class="h5">Cozy Community Events</h5>
+              <p class="text-base leading-7">
+                Dive into the world of coziness with our personalized Cozy
+                Consultation service. Our expert advisors will take the time to
+                understand your preferences, lifestyle, and desired ambiance.
+              </p>
+            </div>
+          </div>
+          <div class="service-card">
+            <i class="ri-sparkling-line"></i>
+            <div class="flex flex-col gap-y-6">
+              <h5 class="h5">Seasonal Cozy Updates</h5>
+              <p class="text-base leading-7">
+                Dive into the world of coziness with our personalized Cozy
+                Consultation service. Our expert advisors will take the time to
+                understand your preferences, lifestyle, and desired ambiance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- other section -->
+  <section class="other mt-20">
+    <div class="container mx-auto">
+      <div class="flex flex-col gap-y-6 lg:flex-row lg:gap-x-10">
+        <div class="flex flex-col gap-y-6">
+          <h2 class="h2 title-underline">Meet us</h2>
+          <div class="flex flex-col justify-around h-full">
+            <p class="self-start">
+              it's an invitation to connect with the faces and stories that
+              drive our passion. Our team is a vibrant tapestry of diverse
+              talents and experiences, united by a shared commitment to
+              excellence. From the visionary minds shaping our strategies to the
+              dedicated individuals ensuring seamless operations, each member
+              adds a unique hue to our collective canvas.
+            </p>
+            <a href="#" class="btn btn-border self-start lg:text-lg">Chat us</a>
+          </div>
+        </div>
+        <div class="lg:max-w-[540px]">
+          <Image src={otherImg} alt="other room" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- faq -->
+  <section class="faq mt-20">
+    <div class="container mx-auto py-20">
+      <div class="mb-6">
+        <h2 class="h2 text-center title-underline">
+          Frequently Asked Questions
+        </h2>
+      </div>
+      <div class="max-w-6xl mx-auto">
+        <div class="faq-item">
+          <div class="faq-item-header">
+            <h5 class="h5">What types of properties do you specialize in?</h5>
+            <div class="faq-btn text-accent">
+              <i class="ri-add-fill text-2xl font-bold"></i>
+          </div>
+          </div>
+          <div class="faq-item-body">
+            <div class="faq-item-body-content ">
+              This question helps potential clients understand the focus and expertise of the real estate company. It could be residential, commercial, luxury properties, or a specific niche like eco-friendly homes.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item-header">
+            <h5 class="h5">What is the current real estate market like in [specific area or city]?</h5>
+            <div class="faq-btn text-accent">
+              <i class="ri-add-fill text-2xl font-bold"></i>
+          </div>
+          </div>
+          <div class="faq-item-body">
+            <div class="faq-item-body-content ">
+              Clients often want insights into the local real estate market trends, including property values, demand, and any upcoming developments that might affect their decision.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item-header">
+            <h5 class="h5">What is your commission structure?</h5>
+            <div class="faq-btn text-accent">
+              <i class="ri-add-fill text-2xl font-bold"></i>
+          </div>
+          </div>
+          <div class="faq-item-body">
+            <div class="faq-item-body-content ">
+              Understanding the fees and commissions is crucial for clients. They might inquire about the standard commission rates and any additional costs associated with buying or selling a property.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item-header">
+            <h5 class="h5">Can you provide references or testimonials from past clients?</h5>
+            <div class="faq-btn text-accent">
+              <i class="ri-add-fill text-2xl font-bold"></i>
+          </div>
+          </div>
+          <div class="faq-item-body">
+            <div class="faq-item-body-content ">
+              Clients often seek reassurance by asking for references or testimonials. Positive feedback from previous clients can build trust and confidence in the real estate company's capabilities.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item-header">
+            <h5 class="h5">How long have you been in business?</h5>
+            <div class="faq-btn text-accent">
+              <i class="ri-add-fill text-2xl font-bold"></i>
+          </div>
+          </div>
+          <div class="faq-item-body">
+            <div class="faq-item-body-content ">
+              Clients may inquire about the real estate company's experience and track record. Established companies with a history of successful transactions may be perceived as more reliable.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script is:inline>
+new Swiper(".swiper", {
+  slidesPerView: 1,
+  roundLengths: true,
+  loop: false,
+  enabled: false,
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 32,
+      enabled: true,
+    },
+    2000: {
+      slidesPerView: 4,
+      spaceBetween: 64,
+    },
+  },
+});
+</script>

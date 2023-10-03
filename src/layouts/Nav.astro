@@ -1,0 +1,63 @@
+---
+import { Image } from "astro:assets";
+
+// logo
+import logo from "/public/logoipsum.svg";
+---
+
+<div class="header bg-white z-30 py-4 lg:py-6 shadow-md fixed top-0 w-full">
+  <div class="container px-0 mx-auto">
+    <div class="flex justify-between items-center px-10 xl:px-[5rem] lg:px-16">
+      <div>
+        <a href="#" class="uppercase tracking-wide italic">
+          <Image src={logo} alt="logoipsum" />
+        </a>
+      </div>
+  
+      <!-- desktop nav items -->
+      <nav class="dnav_item lg:flex hidden">
+        <ul class="list-none flex gap-10 lg:text-lg">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Project</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+  
+      <div class="mnav__btn lg:hidden">
+        <!-- burger btn -->
+        <div class="burger-container block relative h-16 mr-7">
+          <input
+            class="checkbox absolute block h-8 w-8 top-5 z-10 opacity-0 cursor-pointer"
+            type="checkbox"
+            name=""
+            id="burgerBtn"
+          />
+          <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
+        </div>
+  
+        <!-- mnav item -->
+        <nav
+          class="mnav__items fixed w-full top-[96px] -left-[100%] bg-white h-screen lg:hidden transition-all duration-300 z-20"
+        >
+          <div class="px-12 flex flex-col gap-y-12 h-full">
+            <!-- List -->
+            <ul class="list-none flex flex-col gap-y-10 items-center mt-20">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">about</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Project</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+</div>
