@@ -24,6 +24,7 @@ module.exports = {
         background: "#ffffff",
         primary: "#8f191b",
         secondary: "#ff841f",
+        tertiary: "#f7f0ec",
         accent: "#000000",
       },
       fontSize: {
@@ -44,7 +45,8 @@ module.exports = {
       },
       backgroundImage: {
         hero: "linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), url(/hero.jpg)",
-        hero2: "linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)), url(/hero-2.jpg)"
+        hero2: "linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)), url(/hero-2.jpg)",
+        bgParallax: "url(/bg-1.jpg)",
       },
 		},
 	},

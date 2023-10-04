@@ -1,9 +1,98 @@
 ---
+import { Image } from "astro:assets";
 
+// logo
+import logo from "/public/logoipsum.svg";
+import logoWhite from "/public/logoipsum-white.svg";
 ---
 
-<footer class="footer h-[100px] bg-zinc-950 mt-20">
-  <div class=" ">
-    <h2 class="text-white">Footer</h2>
+<footer class="footer bg-zinc-950 mt-20">
+  <div class="pt-20 pb-5">
+    <!-- footer top-->
+    <div class="container mx-auto">
+      <div class="grid grid-cols-4 gap-x-10 gap-y-10 text-white">
+        <!-- logo -->
+        <div class="flex flex-col col-span-4 lg:col-span-1">
+          <div class="self-center lg:self-start">
+            <a href="#" class="">
+              <Image src={logoWhite} alt="logo" />
+            </a>
+          </div>
+          <div class="mt-10">
+            <p
+              class="font-light text-center lg:text-start text-sm tracking-normal"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+              autem adipisci eos ad totam vitae aut facere sint, aliquam ab.
+            </p>
+          </div>
+        </div>
+
+        <!-- company link -->
+        <div class="flex flex-col col-span-2 items-center lg:col-span-1">
+          <div class="">Company Link</div>
+          <ul class="flex flex-col gap-y-3 mt-10 font-light text-sm">
+            <li><a href="#" class="btn-link">link page 1</a></li>
+            <li><a href="#" class="btn-link">link page 2</a></li>
+            <li><a href="#" class="btn-link">link page 3</a></li>
+            <li><a href="#" class="btn-link">link page 4</a></li>
+          </ul>
+        </div>
+
+        <!-- usefull link -->
+        <div class="flex flex-col col-span-2 items-center lg:col-span-1">
+          <div class="">Usefull Link</div>
+          <ul class="flex flex-col gap-y-3 mt-10 font-light text-sm">
+            <li><a href="#" class="btn-link">link page 1</a></li>
+            <li><a href="#" class="btn-link">link page 2</a></li>
+            <li><a href="#" class="btn-link">link page 3</a></li>
+            <li><a href="#" class="btn-link">link page 4</a></li>
+          </ul>
+        </div>
+
+        <!-- contact detail -->
+        <div class="flex flex-col col-span-4 items-center lg:col-span-1">
+          <div class="">Contact Detail</div>
+          <ul class="flex flex-col gap-y-3 mt-10 font-light text-sm">
+            <li class="flex gap-x-6">
+              <i class="ri-map-pin-2-line"></i>
+              <address>
+                Baliarum Green Village Unit 4 <br />
+                 Jl. Raya Kerobokan, Br. Kancil, Kuta Utara, Badung – Bali
+              </address>
+            </li>
+            <li class="flex gap-x-6">
+              <i class="ri-phone-line"></i>
+              <p>(0361) 4715468 – 4715469</p>
+            </li>
+            <li class="flex gap-x-6">
+              <i class="ri-mail-line"></i>
+              <p>info@baliarum.net</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer bottom -->
+    <div class="text-white mt-10 border-t pt-5">
+      <div class="container mx-auto">
+        <div class="flex flex-col-reverse items-center gap-y-6 lg:flex-row lg:justify-around">
+          <div class="text-sm font-light tracking-wider py-2">
+            &copy; 2023 Logoipsum. All Right Reserved
+          </div>
+
+          <!-- social media -->
+          <div class="footer-social-media">
+            <ul class="text-sm font-light flex gap-x-10">
+              <li><a href="#"><i class="ri-facebook-line"></i></a></li>
+              <li><a href="#"><i class="ri-instagram-line"></i></a></li>
+              <li><a href="#"><i class="ri-google-line"></i></a></li>
+              <li><a href="#"><i class="ri-linkedin-line"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>

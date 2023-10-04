@@ -41,7 +41,7 @@
 }
 
 .burger-container input[type="checkbox"]:checked~.hamburger-lines .line2 {
-  transform: scaleY(0);
+  transform: scaleX(0);
 }
 
 .burger-container input[type="checkbox"]:checked~.hamburger-lines .line3 {
@@ -51,3 +51,18 @@
 .mnav__items.active {
   left: 0;
 }
+
+/* nav link */
+.dnav_item a {
+  @apply py-2 relative;
+}
+
+.dnav_item a::before {
+  content: "";
+  @apply absolute bottom-0 left-0 w-0 border-b-4 border-b-primary transition-all duration-300;
+}
+
+.dnav_item a:hover::before {
+  @apply w-full;
+}
+

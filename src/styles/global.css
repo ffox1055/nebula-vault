@@ -67,11 +67,40 @@ h6 {
 
 /* services */
 .service-card {
-  @apply flex flex-col gap-y-3 shadow-sm p-5;
+  @apply flex flex-col gap-y-3 shadow-sm p-10 bg-white;
+}
+
+.service-card .icon-wrapper {
+  @apply mb-6;
 }
 
 .service-card i {
-  @apply text-secondary text-4xl;
+  @apply text-[#c29f7b] text-4xl border rounded-full border-[#c29f7b] self-start p-[20px] transition-all duration-500;
+}
+
+.service-card:hover i {
+  @apply bg-[#c29f7b] text-white;
+}
+
+/* plan */
+.plan-tabs li.active {
+  @apply bg-tertiary border-b-2 border-secondary;
+}
+
+.plan-tabs li a {
+  @apply px-10 leading-[60px] py-4;
+}
+
+.tab-item {
+  @apply opacity-0 hidden;
+}
+
+.tab-item.active {
+  @apply  opacity-100 block;
+}
+
+.tabs-content-description {
+  @apply flex justify-between border-b border-tertiary uppercase py-3;
 }
 
 /* faq */
@@ -88,4 +117,13 @@ h6 {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+}
+
+/* footer */
+.footer-social-media a {
+  @apply p-2 border border-transparent rounded-xl transition-all duration-300 text-xl;
+}
+
+.footer-social-media a:hover {
+  @apply border-white;
 }

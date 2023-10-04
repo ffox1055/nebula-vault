@@ -25,3 +25,24 @@
 .btn-border:hover::before {
   transform: translateY(0);
 }
+
+
+/* standard link */
+.btn-link {
+  @apply relative py-1;
+}
+
+.btn-link::before {
+  content: "";
+  @apply absolute left-0 bottom-0 w-0 border-b border-secondary transition-all duration-200;
+}
+
+.btn-link:hover::before {
+  @apply w-full;
+}
+
+
+/* 
+.btn-link:hover {
+
+} */
